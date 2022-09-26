@@ -1,7 +1,9 @@
-pub mod dayone {
-    use std::fs::File;
-    use std::io::{BufRead, BufReader};
+use std::fs::File;
+use std::io::{BufRead, BufReader};
 
+pub struct DayOne;
+
+impl DayOne {
     pub fn part_one() -> i32 {
         let file = BufReader::new(File::open("input.txt").expect("open failed"));
 
