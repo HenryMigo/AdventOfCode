@@ -1,4 +1,4 @@
-use adventofcodelibrary::dayone;
+use adventofcodelibrary::*;
 
 fn main() {
     // TODO: Implement a menu to select which day to run
