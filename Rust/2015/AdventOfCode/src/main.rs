@@ -12,9 +12,7 @@ fn main() {
     println!("Advent of code - 2015");
     println!("----------------------");
     print_result(day_one_part_one, day_one_part_two, 1);
-    print_result(day_one_part_two, day_one_part_two, 2);
-    print_result(day_two_part_one, day_two_part_one, 1);
-    print_result(day_two_part_two, day_two_part_two, 2);
+    print_result(day_two_part_one, day_two_part_two, 2);
 }
 
 fn print_result(part_one: i32, part_two: i32, day: i32) {
