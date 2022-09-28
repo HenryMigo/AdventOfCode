@@ -9,4 +9,4 @@ edition = "2021"
 
 [lib]
 name = "adventofcodelibrary"
-path = "./advent_of_code_library/src/dayone.rs"
+path = "./advent_of_code_library/src/*.rs"
