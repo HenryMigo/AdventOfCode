@@ -17,20 +17,20 @@ impl DayTwo {
             let width = DayTwo::convert_string_to_int(measurements.next().expect("Width failed"));
             let height = DayTwo::convert_string_to_int(measurements.next().expect("Height failed"));
 
-            let mut smallest = length;
+            let length_area = length * width;
+            let width_area = width * height;
+            let height_area = height * length;
+            let mut smallest = length_area;
 
-            if smallest > width {
-                smallest = width;
+            if smallest > width_area {
+                smallest = width_area;
             }
 
-            if smallest > height {
-                smallest = height;
+            if smallest > height_area {
+                smallest = height_area;
             }
 
-            let result = (2 * (length * width))
-                + (2 * (width * height))
-                + (2 * (height * length))
-                + smallest;
+            let result = (2 * length_area) + (2 * width_area) + (2 * height_area) + smallest;
 
             areas.push(result);
         }
