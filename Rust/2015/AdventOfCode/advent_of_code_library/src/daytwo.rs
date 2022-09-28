@@ -46,6 +46,7 @@ impl DayTwo {
 
     pub fn part_two() -> i32 {
         _ = BufReader::new(File::open("daytwo.txt").expect("open failed"));
+
         -1
     }
 
