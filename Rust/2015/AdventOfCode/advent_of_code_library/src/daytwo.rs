@@ -5,7 +5,7 @@ pub struct DayTwo;
 
 impl DayTwo {
     pub fn part_one() -> i32 {
-        let file = BufReader::new(File::open("daytwo.txt").expect("open failed"));
+        let file = BufReader::new(File::open("files/daytwo.txt").expect("open failed"));
 
         let mut areas: Vec<i32> = Vec::new();
 
@@ -45,7 +45,7 @@ impl DayTwo {
     }
 
     pub fn part_two() -> i32 {
-        _ = BufReader::new(File::open("daytwo.txt").expect("open failed"));
+        _ = BufReader::new(File::open("files/daytwo.txt").expect("open failed"));
 
         -1
     }

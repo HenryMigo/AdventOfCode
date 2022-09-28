@@ -5,7 +5,7 @@ pub struct DayOne;
 
 impl DayOne {
     pub fn part_one() -> i32 {
-        let file = BufReader::new(File::open("dayone.txt").expect("open failed"));
+        let file = BufReader::new(File::open("files/dayone.txt").expect("open failed"));
 
         let mut floor = 0;
 
@@ -23,7 +23,7 @@ impl DayOne {
     }
 
     pub fn part_two() -> i32 {
-        let file = BufReader::new(File::open("dayone.txt").expect("open failed"));
+        let file = BufReader::new(File::open("files/dayone.txt").expect("open failed"));
 
         let mut floor = 0;
         let mut character_number = 0;
