@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/CSharp/AOC2022/.vs
+/CSharp/AOC2022/AOC2022.Library/bin/Debug/net7.0
+/CSharp/AOC2022/AOC2022.Library/obj
