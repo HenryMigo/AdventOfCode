@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace AOC2022.Library
+﻿namespace AOC2022.Library
 {
     public static class Day3
     {
