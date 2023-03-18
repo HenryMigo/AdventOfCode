@@ -31,5 +31,31 @@ namespace AOC2022.UnitTests
             // Assert
             result.Should().Be(7821);
         }
+
+        [Fact]
+        public void Day3_Part2_Example()
+        {
+            // Arrange
+            var inputData = "vJrwpWtwJgWrhcsFMMfFFhFp\r\njqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL\r\nPmmdzqPrVvPwwTWBwg\r\nwMqvLMZHhHMvwLHjbvcjnnSBnvTQFn\r\nttgJtRGJQctTZtZT\r\nCrZsJsPPZsGzwwsLwLmpwMDw".Split("\r\n").ToList();
+
+            // Act
+            var result = Day3.Part_Two(inputData);
+
+            // Assert
+            result.Should().Be(70);
+        }
+
+        [Fact]
+        public void Day3_Part2()
+        {
+            // Arrange
+            var inputData = File.ReadAllLines("../../../InputData/Day3.txt").ToList();
+
+            // Act
+            var result = Day3.Part_Two(inputData);
+
+            // Assert
+            result.Should().Be(2752);
+        }
     }
 }

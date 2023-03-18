@@ -1,4 +1,6 @@
-﻿namespace AOC2022.Library
+﻿using System.Linq;
+
+namespace AOC2022.Library
 {
     public static class Day3
     {
@@ -63,15 +65,23 @@
             var ruckSacks = new List<RuckSack>();
             var existsInBothSacks = new List<Dictionary<char, int>>();
 
-            foreach(var input in inputData)
+            foreach (var input in inputData)
             {
                 ruckSacks.Add(new RuckSack(input));
             }
 
-            foreach(var sack in ruckSacks)
+            ExistsInSack(ruckSacks, existsInBothSacks);
+
+            return existsInBothSacks.Select(x => x.Sum(y => y.Value)).Sum();
+        }
+
+        private static void ExistsInSack(List<RuckSack> ruckSacks, List<Dictionary<char, int>> existsInBothSacks)
+        {
+            foreach (var (sack, existsInBoth) in from sack in ruckSacks
+                                                 let existsInBoth = new Dictionary<char, int>()
+                                                 select (sack, existsInBoth))
             {
-                var existsInBoth = new Dictionary<char, int>();
-                foreach(var item in sack.FirstPart)
+                foreach (var item in sack.FirstPart)
                 {
                     if (sack.SecondPart.Contains(item))
                     {
@@ -84,8 +94,38 @@
 
                 existsInBothSacks.Add(existsInBoth);
             }
+        }
 
-            return existsInBothSacks.Select(x => x.Sum(y => y.Value)).Sum();
+        public static int Part_Two(List<string> inputData)
+        {
+            var ruckSacks = new List<string>();
+            var existsInAllThreeSacks = new List<Dictionary<char, int>>();
+
+            foreach (var input in inputData)
+            {
+                ruckSacks.Add(input);
+            }
+
+            for (var i = 0; i <= ruckSacks.Count - 3; i += 3)
+            {
+                var sack = ruckSacks[i];
+                var existsInThree = new Dictionary<char, int>();
+
+                foreach(var item in sack)
+                {
+                    if (ruckSacks[i + 1].Contains(item) && ruckSacks[i + 2].Contains(item))
+                    {
+                        if (!existsInThree.ContainsKey(item))
+                        {
+                            existsInThree.Add(item, Scores[item]);
+                        }
+                    }
+                }
+
+                existsInAllThreeSacks.Add(existsInThree);
+            }
+
+            return existsInAllThreeSacks.Select(x => x.Sum(y => y.Value)).Sum();
         }
     }
 
