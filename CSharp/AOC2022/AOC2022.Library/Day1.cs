@@ -1,5 +1,7 @@
-﻿namespace AOC2022 {
-    public static class Day1 {
+﻿namespace AOC2022.Library
+{
+    public static class Day1
+    {
         public static int Part_One(IEnumerable<string> inputs)
         {
             var elves = GetElves(inputs);
@@ -48,8 +50,10 @@
         }
     }
 
-    public class Elves {
-        public Elves(List<string> calories) {
+    public class Elves
+    {
+        public Elves(List<string> calories)
+        {
             Calories = calories.Select(int.Parse).ToList();
         }
 
