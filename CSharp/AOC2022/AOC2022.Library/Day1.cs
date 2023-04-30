@@ -22,9 +22,9 @@
             return topThreeElves.Sum();
         }
 
-        private static List<Elves> GetElves(IEnumerable<string> inputs)
+        private static List<ElvesDayOne> GetElves(IEnumerable<string> inputs)
         {
-            var elves = new List<Elves>();
+            var elves = new List<ElvesDayOne>();
             var tempList = new List<string>();
             var list = inputs.ToArray();
 
@@ -32,12 +32,12 @@
             {
                 if (i == list.Length)
                 {
-                    elves.Add(new Elves(tempList));
+                    elves.Add(new ElvesDayOne(tempList));
                     tempList = new List<string>();
                 }
                 else if (string.IsNullOrEmpty(list[i]))
                 {
-                    elves.Add(new Elves(tempList));
+                    elves.Add(new ElvesDayOne(tempList));
                     tempList = new List<string>();
                 }
                 else
@@ -50,9 +50,9 @@
         }
     }
 
-    public class Elves
+    public class ElvesDayOne
     {
-        public Elves(List<string> calories)
+        public ElvesDayOne(List<string> calories)
         {
             Calories = calories.Select(int.Parse).ToList();
         }

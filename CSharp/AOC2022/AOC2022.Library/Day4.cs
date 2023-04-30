@@ -72,9 +72,9 @@
             return count;
         }
 
-        private static Elves GetPairs(List<string> inputData)
+        private static ElvesDayFour GetPairs(List<string> inputData)
         {
-            var elves = new Elves( new List<List<Pairs>>());
+            var elves = new ElvesDayFour( new List<List<Pairs>>());
 
             foreach (var line in inputData)
             {
@@ -94,11 +94,11 @@
         }
     }
 
-    public class Elves
+    public class ElvesDayFour
     {
         public List<List<Pairs>> Pairs { get; set; }
 
-        public Elves(List<List<Pairs>> pairs)
+        public ElvesDayFour(List<List<Pairs>> pairs)
         {
             Pairs = pairs;
         }
