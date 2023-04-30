@@ -74,10 +74,7 @@
 
         private static Elves GetPairs(List<string> inputData)
         {
-            var elves = new Elves
-            {
-                Pairs = new List<List<Pairs>>()
-            };
+            var elves = new Elves( new List<List<Pairs>>());
 
             foreach (var line in inputData)
             {
@@ -100,6 +97,11 @@
     public class Elves
     {
         public List<List<Pairs>> Pairs { get; set; }
+
+        public Elves(List<List<Pairs>> pairs)
+        {
+            Pairs = pairs;
+        }
     }
 
     public class Pairs
