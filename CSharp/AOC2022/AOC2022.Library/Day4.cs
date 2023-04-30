@@ -46,8 +46,6 @@
                     var firstRange = pair[j];
                     var secondRange = pair[j + 1];
 
-                    // 2, 6 -> 4, 8 (works)
-                    // 2, 7 -> 4, 8 
                     if (firstRange.From <= secondRange.From && firstRange.To >= secondRange.To)
                     {
                         count++;
