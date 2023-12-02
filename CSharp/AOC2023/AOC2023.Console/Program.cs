@@ -2,9 +2,9 @@
 
 using AOC2023.Library;
 
-var dayOne = new DayOne();
+var dayTwo = new DayTwo();
 
-var result = await dayOne.PartTwoAsync("DayOne");
+var result = await dayTwo.PartTwoAsync("DayTwo");
 
 Console.WriteLine($"Result: {result}");
 
